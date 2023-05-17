@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* TODO: These utilities are not working. */
+@layer utilities {
+	.border-completed-light {
+		background: linear-gradient(white, white) padding-box,
+			linear-gradient(135deg, #57ddff, #c058f3) border-box;
+		border: 1px solid transparent;
+	}
+	.border-completed-dark {
+		background: linear-gradient(white, white) padding-box,
+			linear-gradient(135deg, #57ddff, #c058f3) border-box;
+		border: 1px solid transparent;
+	}
+}

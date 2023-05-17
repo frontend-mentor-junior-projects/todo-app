@@ -14,6 +14,46 @@ const Colors = {
 	'dark-700': 'hsl(235, 24%, 19%)',
 }
 
+export type TodoType = {
+	id: string
+	title: string
+	completed: boolean
+}
+
+const TODO_LIST: TodoType[] = [
+	{
+		id: '0',
+		title: 'Jog around the park 3x',
+		completed: false,
+	},
+	{
+		id: '1',
+		title: '10 minutes meditation',
+		completed: false,
+	},
+	{
+		id: '2',
+		title: 'Read for 1 hour',
+		completed: false,
+	},
+	{
+		id: '3',
+		title: 'Pick up groceries',
+		completed: false,
+	},
+	{
+		id: '4',
+		title: 'Complete Todo App on Frontend Mentor',
+		completed: true,
+	},
+]
+
+export type Filter = 'All' | 'Active' | 'Completed'
+
+const FILTERS: Filter[] = ['All', 'Active', 'Completed']
+
 export default {
 	Colors,
+	TODO_LIST,
+	FILTERS,
 }

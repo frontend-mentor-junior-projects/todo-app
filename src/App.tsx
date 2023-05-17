@@ -1,9 +1,12 @@
+import Main from 'components/Main'
+import { ThemeProvider } from 'context/ThemeContext'
+
 function App() {
-  return (
-    <main>
-      <h1>Hello, World!</h1>
-    </main>
-  )
+	return (
+		<ThemeProvider>
+			<Main />
+		</ThemeProvider>
+	)
 }
 
 export default App
