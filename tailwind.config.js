@@ -23,15 +23,14 @@ export default {
 				'dark-700': 'hsl(235, 24%, 19%)',
 			},
 			backgroundImage: {
-				// 'completed-todo': 'linear-gradient(hsl(192, 100%, 67%) hsl(280, 87%, 65%))',
 				// TODO: This utility is not working.
 				'complete-todo':
 					'linear-gradient(white, white) padding-box, linear-gradient(135deg, #57ddff, #c058f3) border-box',
 				'completed-todo': 'linear-gradient(135deg, #57DDFF, #C058F3)',
-				'mobile-dark': "url('./public/assets/images/bg-mobile-dark.jpg')",
-				'mobile-light': "url('./public/assets/images/bg-mobile-light.jpg')",
-				'desktop-dark': "url('./public/assets/images/bg-desktop-dark.jpg')",
-				'desktop-light': "url('./public/assets/images/bg-desktop-light.jpg')",
+				'mobile-dark': "url('assets/images/bg-mobile-dark.jpg')",
+				'mobile-light': "url('assets/images/bg-mobile-light.jpg')",
+				'desktop-dark': "url('assets/images/bg-desktop-dark.jpg')",
+				'desktop-light': "url('assets/images/bg-desktop-light.jpg')",
 			},
 			fontSize: {
 				body: '18px',
