@@ -10,6 +10,9 @@ const meta: Meta<typeof Todo> = {
 	parameters: {
 		layout: 'fullscreen',
 	},
+	args: {
+		todo: { id: '0', title: 'Jog around the park 3x', completed: false },
+	},
 	decorators: [
 		(Story) => {
 			return (
@@ -24,20 +27,9 @@ const meta: Meta<typeof Todo> = {
 export default meta
 type Story = StoryObj<typeof Todo>
 
-export const Default: Story = {
-	args: {
-		todo: { id: '0', title: 'Jog around the park 3x', completed: false },
-	},
-}
-
-export const Completed: Story = {
-	args: {
-		todo: { ...Default.args?.todo, completed: true },
-	},
-}
+export const Default: Story = {}
 
 export const Active: Story = {
-	args: { ...Default.args },
 	play: ({ canvasElement }) => {
 		const canvas = within(canvasElement)
 
@@ -52,5 +44,11 @@ export const Active: Story = {
 
 		const todo = canvas.getByDisplayValue('Jog around the park 3x')
 		expect(todo).toHaveClass('line-through')
+	},
+}
+
+export const Completed: Story = {
+	args: {
+		todo: { id: '0', title: 'Jog around the park 3x', completed: true },
 	},
 }
